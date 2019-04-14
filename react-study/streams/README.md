@@ -6,3 +6,4 @@
 - `.sidebar` 랑 `.modal` 이랑 비교하는데, stacking context 의 root element 인 `.positioned` 와 비교
 - `.sidebar` 가 나중에 불려지기 때문에 display on the top
 - default z-index 는 0이다.
+![이미지](assets/4.png)

@@ -27,7 +27,7 @@
       background-color: gray;
       left: 0;
       top: 0;
-      z-index: 10;
+      z-index: 999;
     }
 
     .positioned {
@@ -37,12 +37,13 @@
   </style>
 </head>
 <body>
-  <div class="positioned">
-    <div class="modal">
-      <div class="modal-body">
-        <h1>I am a modal</h1>
-      </div>
+  <div class="modal">
+    <div class="modal-body">
+      <h1>I am a modal</h1>
     </div>
+  </div>
+
+  <div class="positioned">
   </div>
 
   <div class="sidebar">I am a sidebar</div>

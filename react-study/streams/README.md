@@ -9,3 +9,5 @@
 ![이미지](assets/4.png)
 ![이미지](assets/5.png)
 ![이미지](assets/6.png)
+- 유저의 방송을 받아 웹 브라우저들에 송출해줌
+- OBS 를 통해 RTMP server 로 유저의 방송 데이터 보냄

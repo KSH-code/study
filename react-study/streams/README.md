@@ -7,3 +7,5 @@
 - `.sidebar` 가 나중에 불려지기 때문에 display on the top
 - default z-index 는 0이다.
 ![이미지](assets/4.png)
+![이미지](assets/5.png)
+![이미지](assets/6.png)

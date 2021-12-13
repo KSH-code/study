@@ -30,3 +30,31 @@
   - simple하지 않고, obvious하지 않기 때문이다.
 - 복잡성은 한 번의 큰 문제로 오지 않고, 조금씩 조금씩 쌓여가며 문제를 만든다. 이는 결국 거의 모든 부분을 수정해야할 만큼 문제가 된다.
 - *내 생각: 기획을 명확하게 이해하고, 코드가 수정하기 어렵다면 미리 리팩토링을 해야한다. 코드가 수정하기 어렵다고 느끼는 것이 첫 번째의 시작이며 이는 더 좋은 디자인을 선택할 수 있는 기회이기도 하다.*
+
+# Working Code Isn’t Enough
+- 일반적으로 회사에서는 tactical mindset을 원하지만, 우리는 strategic mindset을 가져야한다.
+- tactical programming: 최소한의 수정을 통해 기능을 빠르게 구현하는 방식을 의미한다.
+- strategic programming: tactical programming과 반대로 분석, 수정을 통해서 feature구현을 하며 great design으로 가는 방식을 의미한다.
+- difference both
+  - Facebook(Meta) v.s. Google
+  - Meta: tactical -> strategic
+  - Google: strategic
+  - 경쟁사가 있다면 신규기능은 tatical programming으로 빠르게 시장 검증을 하고 strategic하게 변경하는 것은 어떨까?
+- 프로젝트의 기간 중 10% ~ 20%를 소프트웨어 개선작업으로 사용하자
+  - 지금 당장은 불필요할 수 있지만, 점점 소프트웨어가 발전함에 따라 tactical하게만 하는 작업과는 큰 차이가 발생할 수 있다.
+
+# Modules Should Be Deep
+- 각각 모듈은 각각에 모듈에 대해서만 복잡성을 가져야만 개발하기가 편리하다. Congnitive load가 있으면 안좋기 때문이다.
+- 하지만, 현실세계에서는 모듈은 함께 동작해야 하므로 불가능하다. 그래서 우리는 이 의존성을 최소화 시키는 것이 목표이다.
+  - interface와 implementation을 이용한다.
+  - interface: what
+  - implementation: how
+- interface와 implementation의 분리는 사용하는 유저들에 따라 다르게 구성해야 한다.
+  - File system은 최적화가 많이 필요한 경우 어떤 방식으로 memory를 다루는지와 같은 detail한 정보를 필요로하고,
+  - 일반 유저는 create, delete, info와 같은 기능만 필요하다.
+- Deep v.s. Shallow
+  - deep: 추상화를 잘한 것, interface의 method수가 적은 경우이다.
+  - shallow: deep과는 다르게 구현을 노출하는 것이다. method수는 구현의 복잡도와 비례한다.
+  - 일반적으로는 deep module이 사용자에게 알아야 하는 기능 수를 줄이기도 하고, implementation의 수정 영향을 줄일 수 있으므로 유용하다.
+  - deep module의 interface를 잘 구성하는 방법은 method를 최소화해서 제작한 후 사용자가 원하는 기능의 common case를 잘 파악한 후 제공하는 것이다.
+- Too many small classes: overall complexity를 증가시킨다.

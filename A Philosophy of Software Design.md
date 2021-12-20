@@ -58,3 +58,35 @@
   - 일반적으로는 deep module이 사용자에게 알아야 하는 기능 수를 줄이기도 하고, implementation의 수정 영향을 줄일 수 있으므로 유용하다.
   - deep module의 interface를 잘 구성하는 방법은 method를 최소화해서 제작한 후 사용자가 원하는 기능의 common case를 잘 파악한 후 제공하는 것이다.
 - Too many small classes: overall complexity를 증가시킨다.
+
+# Information Hiding
+- low-level에 대한 내용은 숨겨서 cognitive load를 줄이는 것이 목표이다.
+  - B-tree인 경우 어떻게 정렬하는지, page size는 어떻게 관리되는지 와 같은 내용을 의미한다.
+  - 단순히 private하게 정의하는 것은 information hiding이라고 볼 수 없다. 왜냐하면, public getter, setter로 접근이 가능하기 때문이다. 하지만 간접적으로 information hiding을 하는데 도움된다.
+- information hiding의 반의어는 information leakage이다.
+  - 한 모듈이 변경되는 것에따라 의존하는 모듈들도 변경하는 것을 의미한다.
+  - 하드코딩되거나 두 모듈이 밀접하게 알아야하는 정보는 interface의 leakage보다 위험하다. obvious하지 않기 때문이다.
+- 해결하기 위한 방법으로는 한 수정으로 인해 여러 수정이 발생하는 부분들을 한 곳으로 모으는 것이다.
+
+## Temporal decompisition
+- 시간에 실행되는 방식으로 나눠서 구조화하면 information leakage가 발생한다. read, modify, save와 같은 형식으로 나누게 되면 read, save에서 공통 처리하는 로직이 생기는 것을 예로 볼 수 있다.
+- 따라서, 필요한 데이터 위주로 구조화하는 것이 좋다.
+
+
+## Examples
+- 왼손이 하는 일을 오른손이 모르게 하라..?
+  - `String getParameter(String key)` instead of `Map getParameters`
+- normal case를 default하게 구현하고, 특별한 다른 케이스는 default를 override해서 사용할 수 있게끔 구현하라
+
+## Taking it too far
+- 외부에서 필요로 하는 데이터까지 숨기지 말자
+
+# General-Purpose Modules are Deeper
+- 너무 일반화하면 기능을 추가하기가 어렵기도 하고, 너무 특정 기능을 위해 코드를 작성하면 반대로 리팩토링이 필요하다.
+- 어떻게 해야할까?
+
+## Make classes somewhat general-purpose
+- 인터페이스는 동일하되, 내부 구현이 변경되는 것과 무관하게 작성하자
+- What is the simplest interface that will cover all my current needs?
+- In how many situations will this method be used?
+- Is this API easy to use for my current needs?

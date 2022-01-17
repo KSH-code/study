@@ -105,4 +105,37 @@
   - if it is a same functions, that is bad.
 
 ## Decorators
-- WIP
+- need to consider improvement features rather than decrator.
+
+## Interface versus implementation
+- corner cases should be easy to implement. if no, then it is shallow.
+
+## Pass-through variables
+- pass-through variables from upper layer to lower layer is always bad. so it can be solved with context variable(maybe global)
+
+## Conclusion
+- remeber "different layer, different abstraction" rule.
+
+# Pull Complexity Downwards
+- Always your time to implement is not worse than reader's read-time.
+
+# Better Together Or Better Apart?
+- How to compose similar pices of functionalities.
+
+## Together
+- hard to keep track?
+- need to manage by additinoal components?
+- if each different files have functions?
+- need different interface?
+
+## Better Off Apart
+- each implementations implement different documents.
+- general functionality.
+- overlap conceptually.
+- hard to understand without looking at the others.
+
+## Bring together if information is shared
+- decomposition of http data and parse each data.
+
+## Bring together if it will simplify the interface
+- 

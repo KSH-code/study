@@ -117,7 +117,7 @@
 - remeber "different layer, different abstraction" rule.
 
 # Pull Complexity Downwards
-- Always your time to implement is not worse than reader's read-time.
+- Always your time to implement is not important than reader's code read-time.
 
 # Better Together Or Better Apart?
 - How to compose similar pices of functionalities.

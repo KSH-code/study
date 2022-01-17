@@ -138,4 +138,13 @@
 - decomposition of http data and parse each data.
 
 ## Bring together if it will simplify the interface
-- 
+- DRY
+
+## Separate general-purpose and special-purpose code
+- Special-purpose functions should be in high layer and general-purpose functions should be in lower layer.
+  - so high layer uses low layer.
+
+## Splitting and joining methods
+- every method should be clean, simple and work properly.
+- spliting up method only makes sence if it results in cleaner abstractions, overall.
+- when spliting often exists, it should tend to grow complexity. passing state back or forth is bad also here.

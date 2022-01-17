@@ -97,7 +97,7 @@
 
 ## Pass-through method
 - when using adjancet layers, the problem often manifest. that is pass-through methods.
-- pass to another method from argument, because it has a same signature.
+- pass to another method from argument, because it has the same signature.
 
 
 ## When is interface duplication OK?

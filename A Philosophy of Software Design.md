@@ -90,3 +90,19 @@
 - What is the simplest interface that will cover all my current needs?
 - In how many situations will this method be used?
 - Is this API easy to use for my current needs?
+
+# Different Layer, Different Abstraction
+- high layers use facilities provided by lower layers.
+- each layer provides a different abstraction.
+
+## Pass-through method
+- when using adjancet layers, the problem often manifest. that is pass-through methods.
+- pass to another method from argument, because it has a same signature.
+
+
+## When is interface duplication OK?
+- duplication ok, when it is a dispatcher.
+  - if it is a same functions, that is bad.
+
+## Decorators
+- WIP

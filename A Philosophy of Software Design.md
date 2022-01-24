@@ -137,6 +137,9 @@
 ## Bring together if information is shared
 - decomposition of http data and parse each data.
 
+## Bring together to eliminate duplication
+- repeated snippet should be reaplcead with a method call. but, the simple code like code of 2 lines is unnecssary replcaing.
+
 ## Bring together if it will simplify the interface
 - DRY
 
@@ -148,3 +151,32 @@
 - every method should be clean, simple and work properly.
 - spliting up method only makes sence if it results in cleaner abstractions, overall.
 - when spliting often exists, it should tend to grow complexity. passing state back or forth is bad also here.
+
+# Define Errors Out Of Existence
+- exception handling is one of the most worst sources of complexity.
+
+## Why exceptions add complexity
+- the exception alters uncommon flow.
+- exception handling may not be work well. that cannot be detected for a long time, because exception does not occur very often.
+
+## Too many exceptions
+- developers are over-defensive style and throwing is easier than handling so interface tends to be complex as consequence made throwing.
+
+## Define errors out of existence
+- error must be thrown only when it needs.
+
+## Mask exceptions
+- mask exceptions is a technique to handle exceptions at lower-level such as drop packet in tcp.
+
+## Exception aggregation
+- similar errors are handled at a one place.
+
+## Just crash?
+- When it is not worth to handle or throw errors, just crash rather than handling.
+  - e.g. OOM
+
+##  Design special cases out of existence
+- generalize a sepcial case with null object.
+
+## Taking it too far
+- if it is caught outside, handling is needed.

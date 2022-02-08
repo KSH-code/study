@@ -206,6 +206,6 @@
 
 ## Benefits of well-written comments
 - The overall idea behind comments is to capture information that was in the mind of the designer but couldn’t be represented in the code
-- A Document prevents the problems by removing obscurity
+- A Document prevents problems by removing obscurity
   - Cognitive load
   - Unknown unknowns

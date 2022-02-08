@@ -175,8 +175,37 @@
 - When it is not worth to handle or throw errors, just crash rather than handling.
   - e.g. OOM
 
-##  Design special cases out of existence
+## Design special cases out of existence
 - generalize a sepcial case with null object.
 
 ## Taking it too far
 - if it is caught outside, handling is needed.
+
+# Design it Twice
+- Whenever you design interface or architecture, think ideas and compare to others using pros and cons.
+- Consuming desinging time is less than re-implemenation.
+
+# Why Write Comments? The Four Excuses
+- Comment for high-layer abstraction is helpful to understand writers' intention also decreases first-read-time.
+- Four reasons to not write comment that cannot be such reasons.
+
+## Good code is self-documenting
+- the people who belives the code written well is obvious.
+- but the clean methods tend to be shallow. so it needs to understand all of them.
+- in order to use method, reading and understanding method implemenetaiton are not good at abstraciton.
+
+## I don’t have time to write comments
+- always writer's time is less than readers' read-time.
+- how long time-consuming to write comment? does it really need long compared to implement?
+
+## Comments get out of date and become misleading
+- can be solved with code review.
+
+## All the comments I have seen are worthless
+- explained next chapter.
+
+## Benefits of well-written comments
+- The overall idea behind comments is to capture information that was in the mind of the designer but couldn’t be represented in the code
+- A Document prevents the problems by removing obscurity
+  - Cognitive load
+  - Unknown unknowns

@@ -209,3 +209,58 @@
 - A Document prevents problems by removing obscurity
   - Cognitive load
   - Unknown unknowns
+
+# Comments Should Describe Things that Aren’t Obvious from the Code
+- Comments should be described low-level details that cannot be understood without reading other codes.
+  - e.g. `a` must be called before `b`
+
+## Pick conventions
+- Consistency
+  - to write and read easily.
+- Clarity
+  - for help to others.
+- the categories of comment.
+  - Interface: overall behavior
+  - Data structure member: instance variable, field data and so on.
+  - Implementation comment: inside of method
+  - Cross-module comment: describe cross-module
+- Class variable, method both have to have comment. it is good to have comments rather than worrying about that do not have a comment.
+  - I do not agree with in super clear modules. (e.g. `getMaximumNumber(array)`)
+- Don’t repeat the code
+
+## Don’t repeat the code
+- Comments that describe operations itself in the same way are always bad.
+
+## Lower-level comments add precision
+- write a comment to explain it for what like
+
+## Interface documentation
+- do not need to explain implementation with specific ways.
+
+## Implementation comments: what and why, not how
+- explain for what instead of not to explain how it processes because that is explaind with code itself.
+
+## Cross-module design decisions
+- consider maintaining comment at the same place and then share its link where it needs.
+
+## Conclusion
+- comments are for reader's first time not writer. if reviewer says it is not obvious then it likely is not obvious.
+
+# Choosing Names
+- how does it name for identifier? good name reduces time.
+
+## Example: bad names cause bugs
+- an ambiguous idnetifier will cause bugs.
+
+## Create an image
+- identifier should be read and understood in isolation. which means it can draw a picture using identifier.
+
+## Names should be precise
+- `count` is not precise. `activeCount` is more precies.
+- `blinkStatus` is vague. `isCursorVisible` is more informative.
+
+## Use names consistently
+- for reducing congnitive load, it is needed.
+
+## Conclusion
+- the naming is important

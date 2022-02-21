@@ -264,3 +264,36 @@
 
 ## Conclusion
 - the naming is important
+
+# Write The Comments First
+- Write a comment first before write a code.
+
+## Delayed comments are bad comments
+- After write a code, writing a comment is less attractive compared to writing code.
+
+## Write the comments firs
+- writing class interface comments
+- writing with signature
+- writing public method structure with implementation comments
+- implement
+- repeat loops.
+
+## Comments are a design tool
+- comments are like an abstraction. so before implemneting, that can re-design rapidly.
+
+## Are early comments expensive?
+- calculation total fration of writing comments against writing code.
+
+# Modifying Existing Code
+
+## Stay strategic
+- always you stay stratigic in modifying existing code. even if you have no time to refactor, you can get the time to refactor by planning to your boss.
+
+## Maintaining comments: keep the comments near the code
+
+## Comments belong in the code, not the commit log
+- because it will be searched hard.
+
+## Maintaining comments: avoid duplication
+## Maintaining comments: check the diffs
+## Higher-level comments are easier to maintain

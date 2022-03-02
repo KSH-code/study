@@ -297,3 +297,20 @@
 ## Maintaining comments: avoid duplication
 ## Maintaining comments: check the diffs
 ## Higher-level comments are easier to maintain
+
+# Consistency
+- the consistency of code is important to readers. because it will easily be understood
+- but if you were overzealous, it becomes too much overhead to implement or read.
+
+# Code Should be Obvious
+- it is the same as consistency to reduce readers' time-consuming.
+- code must be easy to read and understand.
+
+# Software Trends
+- consider composite rather than inherit or override.
+- tdd or agile can make a tactical mindset so time to refactor must exist.
+- getter and setter are shallow that become complicate interface so you need to use that it must be needed.
+
+# Designing for Performance
+- optimization is sometimes not to improve but interfaces are getting worse.
+- measure perforamnce both before optimization and after optimization.
